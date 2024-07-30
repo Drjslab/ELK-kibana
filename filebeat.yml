@@ -1,0 +1,11 @@
+# Filebeat settings
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - /var/log/*.log
+
+output.elasticsearch:
+  hosts: ["http://elasticsearch:9200"]
+  username: "elastic"
+  password: "changeme"
